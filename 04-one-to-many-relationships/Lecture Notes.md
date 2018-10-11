@@ -33,7 +33,9 @@
   - How do I define a new object type?
   - When will the initialize method be called?
   - How can I add accessibility to the requested properties?
+  - What is an 'Implicit self'?
 - Refactoring  our character to have a single source of truth (20 min)
-  - What should happen if we reassign an ability's hero property to another hero?
-  - What actually happens if we reassign an ability's hero property to another hero?
+  - Lets remove an ability from the Ability.all array.
+    - Is the ability still in a heroes abilities array?
+    - Should it be?
   - These are the types of bugs we encounter if we define a relationship in multiple ways, instead we should rely on a single source of truth by defining one side of a relationship through behavior
