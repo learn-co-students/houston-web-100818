@@ -8,6 +8,6 @@ Add new methods to our `Hero` Class. When we are finished, a hero should have th
 
 Create a Ability class. The class should have these methods:
 * `Ability#initialize` which accepts a name, and a coolness level. Each should be accessible
-* `Ability#heroes` that returns an array of Hero instances
+* **`Ability#heroes` that returns an array of Hero instances**
 * `Ability#label` that returns a string in the format of "#{name} (#{coolness})"
 * `Ability.all` that returns all the Abilities created.
