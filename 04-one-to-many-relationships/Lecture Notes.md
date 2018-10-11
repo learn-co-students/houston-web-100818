@@ -8,6 +8,7 @@
   - One to One
 - Model
 - Domain
+- Implicit Self
 - Single Source of Truth
 
 
