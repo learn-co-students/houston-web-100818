@@ -14,10 +14,29 @@ class Hero
         @first_name + ' ' + @last_name
     end
 
-    def abilities
-        Ability.all.select do | ability |
-            ability.hero == self
+    def gain_ability(name, coolness)
+        found_ability = Ability.all.find do | ability |
+            ability.name == name # && ability.coolness == coolness
         end
+        if found_ability
+            # found_ability.coolness = coolness
+            HeroAbility.new(self, found_ability)
+        else
+            ability = Ability.new(name, coolness)
+            HeroAbility.new(self, ability)
+        end
+    end
+
+    def abilities
+        my_hero_abilities= HeroAbility.all.select do | hero_ability |
+            hero_ability.hero == self
+        end
+        my_hero_abilities.map do | hero_ability |
+            hero_ability.ability
+        end
+        # Ability.all.select do | ability |
+        #     ability.hero == self
+        # end
     end
 
     def coolest_ability
