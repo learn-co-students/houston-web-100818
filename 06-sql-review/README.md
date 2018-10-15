@@ -43,7 +43,7 @@
 
 ```
 
-7. Write the SQL to return the abilties for a hero
+7. Write the SQL to return the abilities for a hero
 
 ```sql
 
