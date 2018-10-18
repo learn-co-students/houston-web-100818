@@ -12,7 +12,7 @@ class TweetsApp
     # tweet = Tweet.new({'username' => username, 'message' => message})
     # tweet.save
 
-    Tweet.create
+    Tweet.create({'username' => username, 'message' => message})
 
     tweets = Tweet.all
     render(tweets)
@@ -28,6 +28,8 @@ class TweetsApp
 end
 
 
-# Goal 1: Tweel.all
-# 2. Tweet.save
-# 3. Tweet.create
+# 2 goals
+
+# 1) Tweet.all
+# 2) Tweet.save
+# 3) Tweet.create

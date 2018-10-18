@@ -17,6 +17,12 @@ class Tweet
     end
   end
 
+    results.map do |tweet_hash|
+      # return tweet instance
+      Tweet.new(tweet_hash)
+    end
+  end
+  
   def initialize(props={})
     @message = props['message']
     @username = props['username']
