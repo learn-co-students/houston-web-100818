@@ -19,9 +19,23 @@ class Hero
         coolest_ability
     end
 
+    def ability_names
+        abilities.map do |ability|
+            ability[:name]
+        end
+    end
+
     # Returns abilities Ordered Alphabetically 
     def ordered_abilities
-       
+        ability_names.sort
+    end
+
+    def add_ability(new_ability)
+        if new_ability.is_a?(Hash)
+            self.abilities << new_ability
+        else
+            raise ArgumentError
+        end
     end
 
 end
