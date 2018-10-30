@@ -3,3 +3,8 @@
 <p><%= @book.title %></p>
 <p><%= @book.author %></p>
 <p><%= @book.snippet %></p>
+
+<form action="/books/<%= @book.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <button>DELETA MY BOOKA</button>
+</form>
