@@ -1,0 +1,21 @@
+<h1>Edit Leash</h1>
+<form action="/leashes/<%= @leash.id %>" method="POST">
+    <input type="hidden" name="_method" value="PATCH"/>
+    <div>
+        <label>Color</label>
+        <input value="<%= @leash.color %>" name="leash[color]" type="text" />
+    </div>
+    <div>
+        <label>Length</label>
+        <input value="<%= @leash.length %>" name="leash[length]" type="text" />
+    </div>
+    <div>
+        <label>Dog</label>
+        <select name="leash[dog_id]">
+            <% @dogs.each do | dog | %>
+                <option value="<%=dog.id%>"> <%= dog.name%></option>
+            <% end %>
+        </select>
+    </div>
+    <input type="submit">
+</form>

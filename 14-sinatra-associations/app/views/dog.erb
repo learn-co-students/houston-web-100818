@@ -1,0 +1,14 @@
+<h1><%= @dog.name %></h1>
+<p><%= @dog.breed %></p>
+<p><%= @dog.weight %></p>
+<h3>Leashes:</h3>
+<ul>
+<% @dog.leashes.each do | leash | %>
+    <li><%= leash.color %></li>
+<% end %>
+</ul>
+<a href="/dogs/<%= @dog.id%>/edit">Edit</a>
+<form action="/dogs/<%= @dog.id%>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete"/>
+</form>

@@ -1,0 +1,6 @@
+<ul>
+    <% @leashes.each do | leash | %>
+        <li><a href="/leashes/<%=leash.id%>"><%= leash.color %></a></li>
+    <% end %>
+</ul>
+<a href="/leashes/new">Create New</a>

@@ -1,0 +1,6 @@
+<ul>
+    <% @dogs.each do | dog | %>
+        <li><a href="/dogs/<%=dog.id%>"><%= dog.name %></a> (<%=dog.weight%>)</li>
+    <% end %>
+</ul>
+<a href="/dogs/new">Create New</a>

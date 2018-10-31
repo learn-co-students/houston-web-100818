@@ -1,0 +1,8 @@
+<h1><%= @leash.color %></h1>
+<p>Length: <%= @leash.length %></p>
+<p>Dog: <%= @leash.dog.name %></p>
+<a href="/leashes/<%= @leash.id%>/edit">Edit</a>
+<form action="/leashes/<%= @leash.id%>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete"/>
+</form>
