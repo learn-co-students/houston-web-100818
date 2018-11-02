@@ -1,0 +1,2 @@
+class AlansController < ApplicationController
+end
