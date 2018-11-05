@@ -1,0 +1,14 @@
+<h1>Create Dragon</h1>
+
+<%= form_for Dragon.new do | form | %>
+    <%= form.label 'Name'%>
+    <%= form.text_field :name %>
+    <br />
+    <%= form.label 'Height'%>
+    <%= form.text_field :height %>
+    <br />
+    <%= form.label 'Weight'%>
+    <%= form.text_field :weight %>
+    <br />
+    <%= form.submit %>
+<% end %>
