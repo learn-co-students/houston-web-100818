@@ -1,5 +1,5 @@
 #  Rails Dragons
-The app that bites back when it's not busy incenerating you.
+The app that bites back when it's not busy incinerating you.
 
 ## Domain
 This app tracks dragons, their masters, and their abilities.
