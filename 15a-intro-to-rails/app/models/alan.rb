@@ -1,0 +1,2 @@
+class Alan < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+module AlansHelper
+end
