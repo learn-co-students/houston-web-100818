@@ -1,0 +1,6 @@
+<h1>Abilities</h1>
+<ul>
+<% @abilities.each do | ability | %>
+    <li><%= link_to ability.name, ability %> <%= link_to 'Edit', edit_ability_path(ability) %> <%= link_to 'Delete', ability, method: :delete %></li>
+<% end %>
+</ul>
