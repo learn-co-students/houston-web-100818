@@ -1,0 +1,7 @@
+<h1><%= @master.name %></h1>
+<small><%= @master.email %></small>
+<ul>
+<% @master.dragons.each do | dragon | %>
+    <li><%= link_to dragon.name, dragon %></li>
+<% end %>
+</ul>

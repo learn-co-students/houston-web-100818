@@ -1,0 +1,21 @@
+<%= form_with model: @dragon do | form | %>
+    <%= form.label 'Name'%>
+    <%= form.text_field :name %>
+    <br />
+    <%= form.label 'Height'%>
+    <%= form.text_field :height %>
+    <br />
+    <%= form.label 'Weight'%>
+    <%= form.text_field :weight %>
+    <br />
+    <%= form.label 'Image'%>
+    <%= form.text_field :image %>
+    <br />
+    <%= form.label 'Master'%>
+    <%= form.collection_select :master_id, @masters, :id, :name %>
+    <br />
+    <%= form.label 'Abilities'%>
+    <%= form.collection_check_boxes :ability_ids, Ability.all, :id, :name %>
+    <br />
+    <%= form.submit %>
+<% end %>

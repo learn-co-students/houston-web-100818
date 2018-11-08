@@ -1,0 +1,6 @@
+<h1><%= @ability.name %></h1>
+<ul>
+<% @ability.dragons.each do | dragon | %>
+    <li><%= link_to dragon.name, dragon %></li>
+<% end %>
+</ul>

@@ -1,0 +1,11 @@
+<h1><%= @dragon.name %></h1>
+<p>Height: <%= @dragon.height%></p>
+<p>Weight: <%= @dragon.weight%></p>
+<p>Master: <%= link_to @dragon.master.name, @dragon.master %></p>
+<p>Abilties</p>
+<ul>
+<% @dragon.abilities.each do | ability | %>
+    <li><%= link_to ability.name, ability %></li>
+<% end %>
+</ul>
+<p>Image: <%= image_tag(@dragon.image, size: "100x100") %></p>

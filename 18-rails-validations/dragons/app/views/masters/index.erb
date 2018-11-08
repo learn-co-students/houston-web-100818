@@ -1,0 +1,6 @@
+<h1>Masters</h1>
+<ul>
+<% @masters.each do | master | %>
+    <li><%= link_to master.name, master %> <%= link_to 'Edit', edit_master_path(master) %> <%= link_to 'Delete', master, method: :delete %></li>
+<% end %>
+</ul>

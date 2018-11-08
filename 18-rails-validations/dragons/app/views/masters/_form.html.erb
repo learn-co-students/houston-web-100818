@@ -1,0 +1,29 @@
+<%= form_with model: @master do | form | %>
+    <div>
+    <%= form.label 'Name'%>
+    <%= form.text_field :name %>
+    <%= form.label 'Email'%>
+    <%= form.text_field :email %>
+    </div>
+    <%= form.fields_for :dragons do | dragon_form | %>
+    <br/>
+        <div>
+        <%= dragon_form.label 'Name'%>
+        <%= dragon_form.text_field :name %>
+        <br />
+        <%= dragon_form.label 'Height'%>
+        <%= dragon_form.text_field :height %>
+        <br />
+        <%= dragon_form.label 'Weight'%>
+        <%= dragon_form.text_field :weight %>
+        <br />
+        <%= dragon_form.label 'Image'%>
+        <%= dragon_form.text_field :image %>
+        <br />
+        <%= dragon_form.label 'Abilities'%>
+        <%= dragon_form.collection_check_boxes :ability_ids, Ability.all, :id, :name %>
+        <br />
+        </div>
+    <% end %>
+    <%= form.submit %>
+<% end %>
