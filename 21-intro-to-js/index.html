@@ -1,0 +1,29 @@
+<html>
+    <body>
+
+        <h1>Hello, it is <span id="time"></span></h1>
+
+        <script>
+
+            function startTime() {
+                const today = new Date();
+                const h = today.getHours();
+                let m = today.getMinutes();
+                let s = today.getSeconds();
+                m = formatTime(m);
+                s = formatTime(s);
+                document.getElementById('time').innerHTML = `${h}:${m}:${s}`;
+                setTimeout(startTime, 500);
+            }
+
+            function formatTime(number) {
+                if(number < 10) {
+                    number = "0" + number
+                }
+                return number;
+            }
+
+            startTime()
+        </script>
+    </body>
+</html>
