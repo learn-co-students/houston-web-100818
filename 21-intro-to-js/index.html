@@ -1,8 +1,6 @@
 <html>
     <body>
 
-        <h1>Hello, it is <span id="time"></span></h1>
-
         <script>
 
             function startTime() {
@@ -12,7 +10,7 @@
                 let s = today.getSeconds();
                 m = formatTime(m);
                 s = formatTime(s);
-                document.getElementById('time').innerHTML = `${h}:${m}:${s}`;
+                document.body.innerHTML = `Hello, it is  ${h}:${m}:${s}`;
                 setTimeout(startTime, 500);
             }
 
