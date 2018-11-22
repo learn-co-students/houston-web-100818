@@ -1,0 +1,45 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Dom Challenge</title>
+  <style>
+    #counter {
+      background-color: black;
+      color: white;
+      display: table;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    Welcome to the DOM Challenge
+  </h1>
+  <h1 id='counter'>
+    0
+  </h1>
+  <button id='-' > ➖ </button>
+  <button id='+' > ➕ </button>
+  <button id='<3' > ❤️ </button>
+  <button id='pause' > pause </button>
+
+  <ul class='likes'></ul>
+
+  <div>
+    <h3>Comments</h3>
+    <div id='comments-list' class='comments'></div>
+
+    <h3>Leave a comment</h3>
+
+    <form id="comment-form" action="">
+      <input type='text' name="content"  cols="30" rows="10">
+      </br>
+      <button id='submit'>submit</button>
+    </form>
+
+  </div>
+
+  <!-- <script src="index.min.js"></script> -->
+  <script src="challenge.js"></script>
+</body>
+</html>
