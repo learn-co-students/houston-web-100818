@@ -1,6 +1,12 @@
 const h = document.createElement.bind(document)
 const s = document.querySelector.bind(document)
 
+const renderList = function(...items){
+    let list = h('ul')
+    list.append(...items)
+    return list
+}
+
 const renderListItem = function(content, callback){
     let listItem =  h('li')
     listItem.innerText= content

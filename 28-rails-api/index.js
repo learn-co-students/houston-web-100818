@@ -28,8 +28,7 @@ const render = function(){
 }
 
 const renderDragonsList = function(){
-    const dragonsList = h('ul')
-       dragonsList.append( 
+    return renderList(
         ...dragons.map( function(currentDragon){
             return renderListItem(currentDragon.name, function(){
                update(function(){
@@ -50,7 +49,6 @@ const renderDragonsList = function(){
             })
         })
     )
-    return dragonsList
 }
 
 const renderSelectedDragon = function(){
@@ -65,6 +63,12 @@ const renderSelectedDragon = function(){
         renderParagraph(selectedDragon.description),
         renderImage(selectedDragon.image),
         h('br'),
+        renderLabel('Abilities'),
+        renderList(
+            ...selectedDragon.abilities.map(function(ability){
+                return renderListItem(ability.name)
+            })
+        ),
         renderButton('Edit', function(){
             update(function(){
                 selectedView = 'dragon-form'
