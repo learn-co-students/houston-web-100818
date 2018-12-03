@@ -1,5 +1,5 @@
 const app = document.getElementById('app')
-const server = ajax('http://localhost:3000')
+const server = ajax('http://localhost:3001/api/v1')
 
 let dragons = []
 let selectedDragon = {}
@@ -31,10 +31,13 @@ const renderDragonsList = function(){
     return renderList(
         ...dragons.map( function(currentDragon){
             return renderListItem(currentDragon.name, function(){
-               update(function(){
-                   selectedDragon = currentDragon
-                   selectedView = 'dragon'
-               })
+                server.get(`/dragons/${currentDragon.id}`)
+                    .then(function(currentDragon){
+                        update(function(){
+                            selectedDragon = currentDragon
+                            selectedView = 'dragon'
+                        })
+                    }) 
            })
         }),
         renderButton('+', function(){
@@ -124,12 +127,22 @@ const renderDragonForm = function(){
                 if(!dragons.includes(selectedDragon)){
                     dragons.push(selectedDragon)
                     // Persisting our newly created dragon
-                    server.post(`/dragons/`, selectedDragon).then(function(result){
+                    server.post(`/dragons/`, {
+                        name: selectedDragon.name,
+                        description: selectedDragon.description,
+                        image: selectedDragon.image,
+                        abilities_attributes: selectedDragon.abilities
+                    }).then(function(result){
                         selectedDragon.id = result.id
                     })
                 } else { 
                     // Persisting our edits
-                    server.patch(`/dragons/${selectedDragon.id}`, selectedDragon)
+                    server.patch(`/dragons/${selectedDragon.id}`, {
+                        name: selectedDragon.name,
+                        description: selectedDragon.description,
+                        image: selectedDragon.image,
+                        abilities_attributes: selectedDragon.abilities
+                    })
                 }
                 selectedView = 'dragon'
             })
