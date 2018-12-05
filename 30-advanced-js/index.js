@@ -1,5 +1,37 @@
 const framesPerSecond = 60;
 
+
+class Component {
+
+    constructor(){
+        this.dom = this.render()
+    }
+
+    setState(callback){
+        callback()
+        let newDom = this.render()
+        let oldDom = this.dom
+        this.dom = newDom
+        this.dom.parent.replaceChild(newDom, oldDom)
+    }
+}
+
+class App extends Component {
+
+    render(){
+        return (
+            h()('Hello World'),
+            div()
+        )
+    }
+
+
+
+}
+
+
+
+
 class Character {
 
     constructor(sprites, speed){
