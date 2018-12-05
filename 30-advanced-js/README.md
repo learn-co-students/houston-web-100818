@@ -3,17 +3,9 @@
 ## Vocabulary
 
 - Imperitive Programming
-
 - Declarative Programming
-
 - `...` (spread / rest)
-
-- `get`
-
-- `set`
-
 - `await`
-
 - `async`
 
 
