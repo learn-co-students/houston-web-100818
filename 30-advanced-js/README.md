@@ -1,17 +1,7 @@
-# Advanced JavaScript
+# Reactive/Declarative Programming Pattern:
 
-## Vocabulary
-
-- Imperitive Programming
-- Declarative Programming
-- `...` (spread / rest)
-- `await`
-- `async`
-
-
-## Deliverables
-
-* Refactor our character class to extend a 
-
-## Outline
-
+1. Reuseable components
+2. Define:
+   1. Stateful data
+   2. A function which renders html based on that data
+3. When the data changes, we call setState 
