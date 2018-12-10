@@ -1,12 +1,7 @@
-const { div, ul, li, input, label } =  elements
+const { div, h1, input, label } =  elements
 
 const state = {
-    currentUser: null,
-    users: [
-        { firstName: 'Joseph', lastName: 'Frasier'},
-        { firstName: 'Alan', lastName: 'Hong'},
-        { firstName: 'Joshua', lastName: 'Miles'}
-    ]
+    user: { firstName: 'Joseph', lastName: 'F'}
 }
 
 const setState = function(callback){
@@ -24,32 +19,29 @@ const render = function(){
 
 const renderUserList = function(){
     return (
-        ul({}, ...state.users.map( user => (
-            li( { click: () => setState( () => state.currentUser = user)}, 
-                `${user.firstName} ${user.lastName}`
-            )
-        )))
+       h1({}, `${state.user.firstName} ${state.user.lastName}`)
     )
 }
 
 const renderUserForm = function(){
-    if(!state.currentUser) return null
-    let { currentUser } = state
+    let { user } = state
     return (
         div({}, 
             label({}, 'First Name'),
             input({ 
-                type: 'text', value: currentUser.firstName, 
+                type: 'text', value: user.firstName, 
                 input: (e) => {
-                    setState( () => currentUser.firstName = e.target.value )
+                    setState( () => user.firstName = e.target.value )
                 }
             }),
             label({}, 'Last Name'),
-            input({ type: 'text', value: currentUser.lastName, 
+            input({ type: 'text', value: user.lastName, 
                 input: (e) => {
-                    setState( () => currentUser.lastName = e.target.value )
+                    setState( () => user.lastName = e.target.value )
                 }
             })
         )
     )
 }
+
+render()
