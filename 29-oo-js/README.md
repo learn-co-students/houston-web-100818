@@ -1,4 +1,4 @@
-# Object Oriented JavaScript (Part I)
+# Object Oriented JavaScript
 
 ## Vocabulary
 
