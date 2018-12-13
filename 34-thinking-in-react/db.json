@@ -1,0 +1,33 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "name": "Make a data file for todays lecture on React",
+      "description": "We'll need some data for the todo list app",
+      "done": false
+    },
+    {
+      "id": 2,
+      "name": "Teach a lecture on React",
+      "description": "Review building a full app using the 'Thinking in React' steps",
+      "done": false
+    },
+    {
+      "id": 3,
+      "name": "Go to team standup",
+      "description": "Eat lunch with the peeps",
+      "done": false
+    },
+    {
+      "id": 4,
+      "name": "Look for an appartment downtown",
+      "description": "Gotta ditch that commute tho",
+      "done": false
+    },
+    {
+      "id": 5,
+      "name": "Help Joe prepare for tomorrow's review",
+      "description": "Should be easy, he got dis"
+    }
+  ]
+}
