@@ -7,6 +7,7 @@
 * Babel
 * Webpack
 * Bundle
+* NPM
 * `create-react-app`
 * `state`
 * `props`
@@ -16,7 +17,7 @@
 
 ## Deliverables
 
-* Make a list simple "master-detail" interface work so that names can be live updated in the list as we edit them in the form
+* Make a list simple profile edit page to work so that names can be live updated in the header as we edit them in the form
 
 ## Outline (Part I)
 
@@ -44,6 +45,8 @@
     - Compare a JSON object to an XML object
   - **Babel** is a tool which will help us compile JSX into javascript
   - **Webpack** is a tool which combines mulitple javascript and css files into a single **bundle**
+  - **NPM** is a tool for managing JavaScript projects
+    - We only really need to worry about `npm install` and `npm start`
   - Using **`create-react-app`**, we set up an environment with Babel and Webpack already setup, working together so that we can write JSX and ES6 JavaScript out of the box
 
 ## Outline (Part II )
