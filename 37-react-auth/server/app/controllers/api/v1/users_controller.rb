@@ -1,5 +1,7 @@
 class Api::V1::UsersController < Api::V1::ApplicationController
     before_action :define_current_user
+
+    skip_before_action :check_authentication, only: [ :index ]
     
     def create
         user = User.create(user_params)
@@ -25,7 +27,7 @@ class Api::V1::UsersController < Api::V1::ApplicationController
     end
     
     def user_params
-        params.permit(:name, :email, :phone)
+        params.permit(:email, :password, :image_url, :name, :phone)
     end
     
     def define_current_user
