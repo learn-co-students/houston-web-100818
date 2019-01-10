@@ -1,0 +1,42 @@
+{
+    "questions":[
+        {
+            "id":1,
+            "content": "Sleep in or nah?",
+            "options":[
+                {
+                    "content": "Sleep in",
+                    "nextQuestionID": 2
+                },
+                {
+                    "content": "Nah",
+                    "nextQuestionID": 3
+                }
+            ]
+        },
+        {
+            "id":2,
+            "content": "Sorry, you have died of disentary...",
+            "options": []
+        },
+        {
+            "id":3,
+            "content": "Would you like to have cereal or eggs?",
+            "options":[
+                {
+                    "content":"Cereal",
+                    "nextQuestionID":2
+                },
+                {
+                    "content":"Eggs",
+                    "nextQuestionID": 4
+                }
+            ]
+        },
+        {
+            "id":4,
+            "content":"You have won at life",
+            "options":[]
+        }
+    ]
+}
