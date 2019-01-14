@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
+import { route } from '../state/routing'
 
-export class Index extends Component {
+export 
+@route('/')
+class Index extends Component {
     render() {
         return (
             <div>

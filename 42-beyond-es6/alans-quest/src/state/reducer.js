@@ -1,4 +1,4 @@
-import history from './history'
+import { history } from './routing'
 
 export const reducer = function(currentState, action){
     const newState = { ...currentState }

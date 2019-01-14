@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import { actions } from '../state/actions'
+import { connectSelectedQuestion, connectBarAndFoo } from '../state/connections'
+import { route } from '../state/routing'
 
-class _QuestionDisplay extends Component {
+export 
+@route('/question/:id')
+@connectBarAndFoo
+@connectSelectedQuestion 
+class QuestionDisplay extends Component {
 
     componentDidMount(){
         this.props.selectQuestion(this.props.match.params.id)
@@ -13,6 +17,7 @@ class _QuestionDisplay extends Component {
     }
 
     render() {
+        console.log(this.props)
         const { question } = this.props
         return (
             <header className="masthead">
@@ -40,9 +45,6 @@ class _QuestionDisplay extends Component {
     }
 }
 
-// Add the prop values you want to pull from state below:
-const mapStateToProps = (state) => ({
-    question: state.selectedQuestion
-})
 
-export const QuestionDisplay = connect(mapStateToProps, actions)(_QuestionDisplay)
+
+// export const QuestionDisplay = connect(mapStateToProps, actions)(_QuestionDisplay)
