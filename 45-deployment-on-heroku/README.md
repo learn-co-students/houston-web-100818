@@ -23,21 +23,18 @@
 
   * Serve all other routes to your front end
 
-  * | get '/', to: 'static#index' |                                    |
-    | --------------------------- | ---------------------------------- |
-    |                             | #  get '*other', to: redirect('/') |
-
-* 
-
-* | require 'rails/application_controller' |                                                       |
-  | -------------------------------------- | ----------------------------------------------------- |
-  |                                        |                                                       |
-  |                                        | class StaticController < Rails::ApplicationController |
-  |                                        | def index                                             |
-  |                                        | render file: Rails.root.join('public', 'index.html')  |
-  |                                        | end                                                   |
-  |                                        | end                                                   |
-
+  ``` ruby
+    get '/', to: 'static#index'                              
+    get '*other', to: redirect('/') 
+  ``` 
+  ```ruby
+    require 'rails/application_controller'
+    class StaticController < Rails::ApplicationController
+        def index                                             
+            render file: Rails.root.join('public', 'index.html')  
+        end                                                   
+    end                                                   
+ ```
 * Add project to GIT
 
 * Create a Remote Repository for Heroku to run our app from
