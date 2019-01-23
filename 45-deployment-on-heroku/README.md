@@ -23,13 +23,15 @@
 
   * Serve all other routes to your front end
 
+In Routes:
   ``` ruby
     get '/', to: 'static#index'                              
     get '*other', to: redirect('/') 
   ``` 
+
+In static_controller.rb:
   ```ruby
-    require 'rails/application_controller'
-    class StaticController < Rails::ApplicationController
+    class StaticController < ApplicationController
         def index                                             
             render file: Rails.root.join('public', 'index.html')  
         end                                                   
