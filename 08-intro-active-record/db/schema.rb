@@ -10,13 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_18_151126) do
+ActiveRecord::Schema.define(version: 2019_02_28_172255) do
 
-  create_table "clowns", force: :cascade do |t|
+  create_table "abilities", force: :cascade do |t|
     t.string "name"
-    t.float "show_size"
-    t.integer "terror_factor"
-    t.string "nose_color"
+    t.integer "coolness"
+  end
+
+  create_table "hero_abilities", force: :cascade do |t|
+    t.integer "hero_id"
+    t.integer "ability_id"
+  end
+
+  create_table "heros", force: :cascade do |t|
+    t.text "first_name"
   end
 
 end
