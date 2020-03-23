@@ -5,7 +5,7 @@ task :console do
   Pry.start
 end
 
-desc 'bark'
-task :bark do
-  puts "WOOF WOOF!!!"
-end
+# desc 'bark'
+# task :bark do
+#   puts "WOOF BARK!"
+# end
